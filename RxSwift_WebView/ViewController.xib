@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="RxSwift_WebView" customModuleProvider="target">
+            <connections>
+                <outlet property="progressView" destination="6I2-hq-4MM" id="P6r-vD-PDI"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Vwu-vb-cvI"/>
+                <outlet property="webView" destination="zBr-77-HCX" id="5nL-Z5-IiH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBr-77-HCX">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6I2-hq-4MM">
+                    <rect key="frame" x="0.0" y="20" width="375" height="2"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="DvF-Gj-PN4"/>
+                    </constraints>
+                </progressView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zBr-77-HCX" secondAttribute="bottom" id="2Ux-XA-3Rt"/>
+                <constraint firstItem="zBr-77-HCX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="UxC-iT-9BA"/>
+                <constraint firstItem="6I2-hq-4MM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZQL-dS-SnB"/>
+                <constraint firstAttribute="trailing" secondItem="6I2-hq-4MM" secondAttribute="trailing" id="Zuj-us-CKv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zBr-77-HCX" secondAttribute="trailing" id="tkO-4N-kh1"/>
+                <constraint firstItem="6I2-hq-4MM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="u73-Je-4ig"/>
+                <constraint firstItem="zBr-77-HCX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="w4F-Bf-cRH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>
